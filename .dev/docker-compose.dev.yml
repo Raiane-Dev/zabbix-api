@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  zabbix-api:
+    container_name: zabbix-api
+    image: golang:1.21
+    volumes:
+      - ../:/go/src
+    tty: true
+    stdin_open: true
+    restart: always
+    network_mode: host
