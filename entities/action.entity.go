@@ -15,18 +15,18 @@ type ActionGet struct {
 	ZabbixCommun
 }
 
-type ActionOutput struct {
+type ActionObject struct {
 	ActionID           string                    `json:"actionid,omitempty"`
 	Name               string                    `json:"name,omitempty"`
 	EventSource        string                    `json:"eventsource,omitempty"`
 	EscPeriod          string                    `json:"esc_period,omitempty"`
 	PauseSupressed     string                    `json:"pause_supressed,omitempty"`
 	Filter             ActionFilter              `json:"filter,omitempty"`
-	Operations         []ActionOperationsOutput  `json:"operations,omitempty"`
-	RecoveryOperations []RecoveryOperationOutput `json:"recovery_operations,omitempty"`
+	Operations         []ActionOperationsObject  `json:"operations,omitempty"`
+	RecoveryOperations []RecoveryOperationObject `json:"recovery_operations,omitempty"`
 }
 
-type RecoveryOperationOutput struct {
+type RecoveryOperationObject struct {
 	OperationID   string                     `json:"operationid,omitempty"`
 	ActionID      string                     `json:"actionid,omitempty"`
 	OperationType string                     `json:"operationtype,omitempty"`
@@ -35,7 +35,7 @@ type RecoveryOperationOutput struct {
 	OpMessage     ActionOperationMessage     `json:"opmessage,omitempty"`
 }
 
-type ActionOperationsOutput struct {
+type ActionOperationsObject struct {
 	OperationID   string                   `json:"operationid,omitempty"`
 	ActionID      string                   `json:"actionid,omitempty"`
 	OperationType int                      `json:"operationtype,omitempty"`
@@ -123,4 +123,8 @@ type ActionFilterCondition struct {
 	Value2        string `json:"value2,omitempty"`
 	FormulaID     string `json:"formulaid,omitempty"`
 	Operator      int    `json:"operator,omitempty"`
+}
+
+type ActionResponse struct {
+	ActionIDs []string `json:"actionids"`
 }

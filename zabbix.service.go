@@ -5,6 +5,10 @@ import (
 	"github.com/Raiane-Dev/zabbix-api.git/utils"
 )
 
+func NewClient() {
+
+}
+
 func bus(body any) (response any) {
 
 	request := &entities.IntegrationRPC{

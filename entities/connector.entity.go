@@ -28,10 +28,10 @@ type ConnectorCreate struct {
 	Description    string               `json:"description,omitempty"`
 	Status         int                  `json:"status,omitempty"`
 	TagsEvaltype   int                  `json:"tags_evaltype,omitempty"`
-	Tags           []ConnectorTagFilter `json:"tags"`
+	Tags           []ConnectorTagFilter `json:"tags,omitempty"`
 }
 
-type ConnectorOutput struct {
+type ConnectorObject struct {
 	ConnectorID    string               `json:"connectorid,omitempty"`
 	Name           string               `json:"name,omitempty"`
 	Url            string               `json:"url,omitempty"`
@@ -54,7 +54,7 @@ type ConnectorOutput struct {
 	Description    string               `json:"description,omitempty"`
 	Status         int                  `json:"status,omitempty"`
 	TagsEvaltype   int                  `json:"tags_evaltype,omitempty"`
-	Tags           []ConnectorTagFilter `json:"tags"`
+	Tags           []ConnectorTagFilter `json:"tags,omitempty"`
 }
 
 type ConnectorUpdate struct {
@@ -80,11 +80,15 @@ type ConnectorUpdate struct {
 	Description    string               `json:"description,omitempty"`
 	Status         int                  `json:"status,omitempty"`
 	TagsEvaltype   int                  `json:"tags_evaltype,omitempty"`
-	Tags           []ConnectorTagFilter `json:"tags"`
+	Tags           []ConnectorTagFilter `json:"tags,omitempty"`
 }
 
 type ConnectorTagFilter struct {
 	Tag      string `json:"tag,omitempty"`
 	Operator int    `json:"operator,omitempty"`
 	Value    string `json:"value,omitempty"`
+}
+
+type ConnectorResponse struct {
+	ConnectorID []string `json:"connectorid,omitempty"`
 }

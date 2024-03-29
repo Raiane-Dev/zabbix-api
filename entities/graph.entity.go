@@ -20,7 +20,7 @@ type GraphCreate struct {
 	YMaxType       int               `json:"ymax_type,omitempty"`
 	YMinItemID     string            `json:"ymin_itemid,omitempty"`
 	YMinType       int               `json:"ymin_type,omitempty"`
-	GItems         []GraphItemOutput `json:"gitems,omitempty"`
+	GItems         []GraphItemObject `json:"gitems,omitempty"`
 }
 
 type GraphUpdate struct {
@@ -44,7 +44,7 @@ type GraphUpdate struct {
 	YMaxType       int               `json:"ymax_type,omitempty"`
 	YMinItemID     string            `json:"ymin_itemid,omitempty"`
 	YMinType       int               `json:"ymin_type,omitempty"`
-	GItems         []GraphItemOutput `json:"gitems,omitempty"`
+	GItems         []GraphItemObject `json:"gitems,omitempty"`
 }
 
 type GraphResponse struct {
@@ -71,7 +71,7 @@ type GraphGet struct {
 	ZabbixCommun
 }
 
-type GraphOutput struct {
+type GraphObject struct {
 	GraphID        string            `json:"graphid,omitempty"`
 	Height         string            `json:"height,omitempty"`
 	Width          string            `json:"width,omitempty"`
@@ -91,5 +91,5 @@ type GraphOutput struct {
 	YMaxType       string            `json:"ymax_type,omitempty"`
 	YMinItemID     string            `json:"ymin_itemid,omitempty"`
 	YMinType       string            `json:"ymin_type,omitempty"`
-	GItems         []GraphItemOutput `json:"gitems,omitempty"`
+	GItems         []GraphItemObject `json:"gitems,omitempty"`
 }

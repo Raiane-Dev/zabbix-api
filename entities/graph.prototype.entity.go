@@ -1,7 +1,7 @@
 package entities
 
 type GraphPrototypeCreate struct {
-	GItems         []GraphItemOutput `json:"gitems,omitempty"`
+	GItems         []GraphItemObject `json:"gitems,omitempty"`
 	Height         int               `json:"height,omitempty"`
 	Name           string            `json:"name,omitempty"`
 	Width          int               `json:"width,omitempty"`
@@ -24,7 +24,7 @@ type GraphPrototypeCreate struct {
 
 type GraphPrototypeUpdate struct {
 	GraphID        string            `json:"graphid,omitempty"`
-	GItems         []GraphItemOutput `json:"gitems,omitempty"`
+	GItems         []GraphItemObject `json:"gitems,omitempty"`
 	Height         int               `json:"height,omitempty"`
 	Name           string            `json:"name,omitempty"`
 	Width          int               `json:"width,omitempty"`
@@ -68,7 +68,7 @@ type GraphPrototypeGet struct {
 	ZabbixCommun
 }
 
-type GraphPrototypeOutput struct {
+type GraphPrototypeObject struct {
 	GraphID        string  `json:"graphid,omitempty"`
 	Height         int     `json:"height,omitempty"`
 	Name           string  `json:"name,omitempty"`

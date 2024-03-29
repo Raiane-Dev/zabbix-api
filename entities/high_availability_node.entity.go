@@ -5,11 +5,11 @@ type HighAvailabilityNodeGet struct {
 	ZabbixCommun
 }
 
-type HighAvailabilityNodeOutput struct {
-	HaNodeID   string `json:"ha_nodeid"`
-	Name       string `json:"name"`
-	Address    string `json:"address"`
-	Port       string `json:"port"`
-	LastAccess string `json:"lastaccess"`
-	Status     string `json:"status"`
+type HighAvailabilityNodeObject struct {
+	HaNodeID   string `json:"ha_nodeid,omitempty"`
+	Name       string `json:"name,omitempty"`
+	Address    string `json:"address,omitempty"`
+	Port       string `json:"port,omitempty"`
+	LastAccess string `json:"lastaccess,omitempty"`
+	Status     string `json:"status,omitempty"`
 }

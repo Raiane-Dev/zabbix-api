@@ -1,91 +1,91 @@
 package entities
 
 type HostInterfaceObject struct {
-	InterfaceID  string                 `json:"interfaceid"`
-	Available    int                    `json:"available"`
-	HostID       string                 `json:"hostid"`
-	Type         int                    `json:"type"`
-	IP           string                 `json:"ip"`
-	DNS          string                 `json:"dns"`
-	Port         string                 `json:"port"`
-	UseIP        int                    `json:"useip"`
-	Main         int                    `json:"main"`
-	Details      []HostInterfaceDetails `json:"details"`
-	DisableUntil string                 `json:"disable_until"`
-	Error        string                 `json:"error"`
-	ErrorsFrom   string                 `json:"errors_from"`
+	InterfaceID  string                 `json:"interfaceid,omitempty"`
+	Available    int                    `json:"available,omitempty"`
+	HostID       string                 `json:"hostid,omitempty"`
+	Type         int                    `json:"type,omitempty"`
+	IP           string                 `json:"ip,omitempty"`
+	DNS          string                 `json:"dns,omitempty"`
+	Port         string                 `json:"port,omitempty"`
+	UseIP        int                    `json:"useip,omitempty"`
+	Main         int                    `json:"main,omitempty"`
+	Details      []HostInterfaceDetails `json:"details,omitempty"`
+	DisableUntil string                 `json:"disable_until,omitempty"`
+	Error        string                 `json:"error,omitempty"`
+	ErrorsFrom   string                 `json:"errors_from,omitempty"`
 }
 
 type HostInterfaceCreate struct {
-	Available    int                    `json:"available"`
-	HostID       string                 `json:"hostid"`
-	Type         int                    `json:"type"`
-	IP           string                 `json:"ip"`
-	DNS          string                 `json:"dns"`
-	Port         string                 `json:"port"`
-	UseIP        int                    `json:"useip"`
-	Main         int                    `json:"main"`
-	Details      []HostInterfaceDetails `json:"details"`
-	DisableUntil string                 `json:"disable_until"`
-	Error        string                 `json:"error"`
-	ErrorsFrom   string                 `json:"errors_from"`
+	Available    int                    `json:"available,omitempty"`
+	HostID       string                 `json:"hostid,omitempty"`
+	Type         int                    `json:"type,omitempty"`
+	IP           string                 `json:"ip,omitempty"`
+	DNS          string                 `json:"dns,omitempty"`
+	Port         string                 `json:"port,omitempty"`
+	UseIP        int                    `json:"useip,omitempty"`
+	Main         int                    `json:"main,omitempty"`
+	Details      []HostInterfaceDetails `json:"details,omitempty"`
+	DisableUntil string                 `json:"disable_until,omitempty"`
+	Error        string                 `json:"error,omitempty"`
+	ErrorsFrom   string                 `json:"errors_from,omitempty"`
 }
 
 type HostInterfaceUpdate struct {
-	InterfaceID  string                 `json:"interfaceid"`
-	Available    int                    `json:"available"`
-	HostID       string                 `json:"hostid"`
-	Type         int                    `json:"type"`
-	IP           string                 `json:"ip"`
-	DNS          string                 `json:"dns"`
-	Port         string                 `json:"port"`
-	UseIP        int                    `json:"useip"`
-	Main         int                    `json:"main"`
-	Details      []HostInterfaceDetails `json:"details"`
-	DisableUntil string                 `json:"disable_until"`
-	Error        string                 `json:"error"`
-	ErrorsFrom   string                 `json:"errors_from"`
+	InterfaceID  string                 `json:"interfaceid,omitempty"`
+	Available    int                    `json:"available,omitempty"`
+	HostID       string                 `json:"hostid,omitempty"`
+	Type         int                    `json:"type,omitempty"`
+	IP           string                 `json:"ip,omitempty"`
+	DNS          string                 `json:"dns,omitempty"`
+	Port         string                 `json:"port,omitempty"`
+	UseIP        int                    `json:"useip,omitempty"`
+	Main         int                    `json:"main,omitempty"`
+	Details      []HostInterfaceDetails `json:"details,omitempty"`
+	DisableUntil string                 `json:"disable_until,omitempty"`
+	Error        string                 `json:"error,omitempty"`
+	ErrorsFrom   string                 `json:"errors_from,omitempty"`
 }
 
 type HostInterfaceResponse struct {
-	InterfaceIDs []string `json:"interfaceids"`
+	InterfaceIDs []string `json:"interfaceids,omitempty"`
 }
 
 type HostInterfaceGet struct {
-	HostIDs      []string `json:"hostids"`
-	InterfaceIDs []string `json:"interfaceids"`
-	ItemIDs      []string `json:"itemids"`
-	TriggerIDs   []string `json:"triggerids"`
-	SelectItems  string   `json:"selectItems"`
-	LimitSelects int      `json:"limitSelects"`
+	HostIDs      []string `json:"hostids,omitempty"`
+	InterfaceIDs []string `json:"interfaceids,omitempty"`
+	ItemIDs      []string `json:"itemids,omitempty"`
+	TriggerIDs   []string `json:"triggerids,omitempty"`
+	SelectItems  string   `json:"selectItems,omitempty"`
+	LimitSelects int      `json:"limitSelects,omitempty"`
 	ZabbixCommun
 }
 
 type HostInterfaceDetails struct {
-	Version        int    `json:"version"`
-	Bulk           int    `json:"bulk"`
-	Community      string `json:"community"`
-	MaxRepetitions int    `json:"max_repetitions"`
-	SecurityName   string `json:"securityname"`
-	SecurityLevel  int    `json:"securitylevel"`
-	AuthPassPhrase string `json:"authpassphrase"`
-	PrivPassPhrase string `json:"privpassphrase"`
-	AuthProtocol   int    `json:"authprotocol"`
-	PrivProtocol   int    `json:"privprotocol"`
-	ContextName    string `json:"contextname"`
+	Version        int    `json:"version,omitempty"`
+	Bulk           int    `json:"bulk,omitempty"`
+	Community      string `json:"community,omitempty"`
+	MaxRepetitions int    `json:"max_repetitions,omitempty"`
+	SecurityName   string `json:"securityname,omitempty"`
+	SecurityLevel  int    `json:"securitylevel,omitempty"`
+	AuthPassPhrase string `json:"authpassphrase,omitempty"`
+	PrivPassPhrase string `json:"privpassphrase,omitempty"`
+	AuthProtocol   int    `json:"authprotocol,omitempty"`
+	PrivProtocol   int    `json:"privprotocol,omitempty"`
+	ContextName    string `json:"contextname,omitempty"`
 }
 
 type HostInterfaceMassAdd struct {
-	Hosts      []map[string]string   `json:"hosts"`
-	Interfaces []HostInterfaceObject `json:"interfaces"`
+	Hosts      []map[string]string   `json:"hosts,omitempty"`
+	Interfaces []HostInterfaceObject `json:"interfaces,omitempty"`
 }
 
 type HostInterfaceMassRemove struct {
-	HostIDs    []string              `json:"hostids"`
-	Interfaces []HostInterfaceObject `json:"interfaces"`
+	HostIDs    []string              `json:"hostids,omitempty"`
+	Interfaces []HostInterfaceObject `json:"interfaces,omitempty"`
 }
 
 type HostInterfaceReplaceHostInterface struct {
-	HostID     string                `json:"hostid"`
-	Interfaces []HostInterfaceObject `json:"interfaces"`
+	HostID     string                `json:"hostid,omitempty"`
+	Interfaces []HostInterfaceObject `json:"interfaces,omitempty"`
 }

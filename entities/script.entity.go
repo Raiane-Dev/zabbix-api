@@ -1,114 +1,114 @@
 package entities
 
 type ScriptObject struct {
-	ScriptID     string                   `json:"scriptid"`
-	Name         string                   `json:"name"`
-	Type         int                      `json:"type"`
-	Command      string                   `json:"command"`
-	Scope        int                      `json:"scope"`
-	ExecuteOn    int                      `json:"execute_on"`
-	MenuPath     string                   `json:"menu_path"`
-	AuthType     int                      `json:"authtype"`
-	Username     string                   `json:"username"`
-	Password     string                   `json:"password"`
-	PublicKey    string                   `json:"publickey"`
-	PrivateKey   string                   `json:"privatekey"`
-	Port         string                   `json:"port"`
-	GroupID      string                   `json:"groupid"`
-	UsrGrpID     string                   `json:"usrgrpid"`
-	HostAccess   int                      `json:"host_access"`
-	Confirmation string                   `json:"confirmation"`
-	Timeout      string                   `json:"timeout"`
-	Parameters   []ScriptWebhookParameter `json:"parameters"`
-	Description  string                   `json:"description"`
-	URL          string                   `json:"url"`
-	NewWindow    int                      `json:"new_window"`
+	ScriptID     string                   `json:"scriptid,omitempty"`
+	Name         string                   `json:"name,omitempty"`
+	Type         int                      `json:"type,omitempty"`
+	Command      string                   `json:"command,omitempty"`
+	Scope        int                      `json:"scope,omitempty"`
+	ExecuteOn    int                      `json:"execute_on,omitempty"`
+	MenuPath     string                   `json:"menu_path,omitempty"`
+	AuthType     int                      `json:"authtype,omitempty"`
+	Username     string                   `json:"username,omitempty"`
+	Password     string                   `json:"password,omitempty"`
+	PublicKey    string                   `json:"publickey,omitempty"`
+	PrivateKey   string                   `json:"privatekey,omitempty"`
+	Port         string                   `json:"port,omitempty"`
+	GroupID      string                   `json:"groupid,omitempty"`
+	UsrGrpID     string                   `json:"usrgrpid,omitempty"`
+	HostAccess   int                      `json:"host_access,omitempty"`
+	Confirmation string                   `json:"confirmation,omitempty"`
+	Timeout      string                   `json:"timeout,omitempty"`
+	Parameters   []ScriptWebhookParameter `json:"parameters,omitempty"`
+	Description  string                   `json:"description,omitempty"`
+	URL          string                   `json:"url,omitempty"`
+	NewWindow    int                      `json:"new_window,omitempty"`
 }
 
 type ScriptWebhookParameter struct {
-	Name  string `json:"name"`
-	Value string `json:"value"`
+	Name  string `json:"name,omitempty"`
+	Value string `json:"value,omitempty"`
 }
 
 type ScriptDebug struct {
-	Logs []string `json:"logs"`
-	Ms   string   `json:"ms"`
+	Logs []string `json:"logs,omitempty"`
+	Ms   string   `json:"ms,omitempty"`
 }
 
 type ScriptLogEntry struct {
-	Level   int    `json:"level"`
-	Ms      string `json:"ms"`
-	Message string `json:"message"`
+	Level   int    `json:"level,omitempty"`
+	Ms      string `json:"ms,omitempty"`
+	Message string `json:"message,omitempty"`
 }
 
 type ScriptUpdate struct {
-	ScriptID     string                   `json:"scriptid"`
-	Name         string                   `json:"name"`
-	Type         int                      `json:"type"`
-	Command      string                   `json:"command"`
-	Scope        int                      `json:"scope"`
-	ExecuteOn    int                      `json:"execute_on"`
-	MenuPath     string                   `json:"menu_path"`
-	AuthType     int                      `json:"authtype"`
-	Username     string                   `json:"username"`
-	Password     string                   `json:"password"`
-	PublicKey    string                   `json:"publickey"`
-	PrivateKey   string                   `json:"privatekey"`
-	Port         string                   `json:"port"`
-	GroupID      string                   `json:"groupid"`
-	UsrGrpID     string                   `json:"usrgrpid"`
-	HostAccess   int                      `json:"host_access"`
-	Confirmation string                   `json:"confirmation"`
-	Timeout      string                   `json:"timeout"`
-	Parameters   []ScriptWebhookParameter `json:"parameters"`
-	Description  string                   `json:"description"`
-	URL          string                   `json:"url"`
-	NewWindow    int                      `json:"new_window"`
+	ScriptID     string                   `json:"scriptid,omitempty"`
+	Name         string                   `json:"name,omitempty"`
+	Type         int                      `json:"type,omitempty"`
+	Command      string                   `json:"command,omitempty"`
+	Scope        int                      `json:"scope,omitempty"`
+	ExecuteOn    int                      `json:"execute_on,omitempty"`
+	MenuPath     string                   `json:"menu_path,omitempty"`
+	AuthType     int                      `json:"authtype,omitempty"`
+	Username     string                   `json:"username,omitempty"`
+	Password     string                   `json:"password,omitempty"`
+	PublicKey    string                   `json:"publickey,omitempty"`
+	PrivateKey   string                   `json:"privatekey,omitempty"`
+	Port         string                   `json:"port,omitempty"`
+	GroupID      string                   `json:"groupid,omitempty"`
+	UsrGrpID     string                   `json:"usrgrpid,omitempty"`
+	HostAccess   int                      `json:"host_access,omitempty"`
+	Confirmation string                   `json:"confirmation,omitempty"`
+	Timeout      string                   `json:"timeout,omitempty"`
+	Parameters   []ScriptWebhookParameter `json:"parameters,omitempty"`
+	Description  string                   `json:"description,omitempty"`
+	URL          string                   `json:"url,omitempty"`
+	NewWindow    int                      `json:"new_window,omitempty"`
 }
 
 type ScriptCreate struct {
-	Name         string                   `json:"name"`
-	Type         int                      `json:"type"`
-	Command      string                   `json:"command"`
-	Scope        int                      `json:"scope"`
-	ExecuteOn    int                      `json:"execute_on"`
-	MenuPath     string                   `json:"menu_path"`
-	AuthType     int                      `json:"authtype"`
-	Username     string                   `json:"username"`
-	Password     string                   `json:"password"`
-	PublicKey    string                   `json:"publickey"`
-	PrivateKey   string                   `json:"privatekey"`
-	Port         string                   `json:"port"`
-	GroupID      string                   `json:"groupid"`
-	UsrGrpID     string                   `json:"usrgrpid"`
-	HostAccess   int                      `json:"host_access"`
-	Confirmation string                   `json:"confirmation"`
-	Timeout      string                   `json:"timeout"`
-	Parameters   []ScriptWebhookParameter `json:"parameters"`
-	Description  string                   `json:"description"`
-	URL          string                   `json:"url"`
-	NewWindow    int                      `json:"new_window"`
+	Name         string                   `json:"name,omitempty"`
+	Type         int                      `json:"type,omitempty"`
+	Command      string                   `json:"command,omitempty"`
+	Scope        int                      `json:"scope,omitempty"`
+	ExecuteOn    int                      `json:"execute_on,omitempty"`
+	MenuPath     string                   `json:"menu_path,omitempty"`
+	AuthType     int                      `json:"authtype,omitempty"`
+	Username     string                   `json:"username,omitempty"`
+	Password     string                   `json:"password,omitempty"`
+	PublicKey    string                   `json:"publickey,omitempty"`
+	PrivateKey   string                   `json:"privatekey,omitempty"`
+	Port         string                   `json:"port,omitempty"`
+	GroupID      string                   `json:"groupid,omitempty"`
+	UsrGrpID     string                   `json:"usrgrpid,omitempty"`
+	HostAccess   int                      `json:"host_access,omitempty"`
+	Confirmation string                   `json:"confirmation,omitempty"`
+	Timeout      string                   `json:"timeout,omitempty"`
+	Parameters   []ScriptWebhookParameter `json:"parameters,omitempty"`
+	Description  string                   `json:"description,omitempty"`
+	URL          string                   `json:"url,omitempty"`
+	NewWindow    int                      `json:"new_window,omitempty"`
 }
 
 type ScriptExecute struct {
-	ScriptID string `json:"scriptid"`
-	HostID   string `json:"hostid"`
-	EventID  string `json:"eventid"`
+	ScriptID string `json:"scriptid,omitempty"`
+	HostID   string `json:"hostid,omitempty"`
+	EventID  string `json:"eventid,omitempty"`
 }
 
 type ScriptExecuteResponse struct {
-	Response string `json:"response"`
-	Value    string `json:"value"`
-	Debug    any    `json:"debug"`
+	Response string `json:"response,omitempty"`
+	Value    string `json:"value,omitempty"`
+	Debug    any    `json:"debug,omitempty"`
 }
 
 type ScriptGet struct {
-	GroupsIDs        []string `json:"groupsids"`
-	HostIDs          []string `json:"hostids"`
-	ScriptIDs        []string `json:"scriptids"`
-	UsrGrpIDs        []string `json:"usrgrpids"`
-	SelectHostGroups string   `json:"selectHostGroups"`
-	SelectHosts      string   `json:"selectHosts"`
-	SelectActions    string   `json:"selectActions"`
+	GroupsIDs        []string `json:"groupsids,omitempty"`
+	HostIDs          []string `json:"hostids,omitempty"`
+	ScriptIDs        []string `json:"scriptids,omitempty"`
+	UsrGrpIDs        []string `json:"usrgrpids,omitempty"`
+	SelectHostGroups string   `json:"selectHostGroups,omitempty"`
+	SelectHosts      string   `json:"selectHosts,omitempty"`
+	SelectActions    string   `json:"selectActions,omitempty"`
 	ZabbixCommun
 }

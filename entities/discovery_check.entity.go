@@ -1,13 +1,13 @@
 package entities
 
-type DiscoveredCheckGet struct {
+type DiscoveryCheckGet struct {
 	DCheckIDs   []string `json:"dcheckids,omitempty"`
 	DRuleIDs    []string `json:"druleids,omitempty"`
 	DServiceIDs []string `json:"dserviceids,omitempty"`
 	ZabbixCommun
 }
 
-type DiscoveredCheckOutput struct {
+type DiscoveryCheckObject struct {
 	DCheckID             string `json:"dcheckid,omitempty"`
 	DRuleID              string `json:"druleid,omitempty"`
 	Key                  string `json:"key_,omitempty"`

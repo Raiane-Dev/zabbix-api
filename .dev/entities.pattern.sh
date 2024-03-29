@@ -12,12 +12,16 @@ type $2Create struct {
 type $2Update struct {
 }
 
+type $2Response struct {
+
+}
+
 type $2Get struct {
 
 }
 "
 
-file="entities/$1.entity.go"
+file="../entities/$1.entity.go"
 
 echo "$content" > "$file"
 

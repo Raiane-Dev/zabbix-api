@@ -35,7 +35,7 @@ type DashboardGet struct {
 	ZabbixCommun
 }
 
-type DashboardOutput struct {
+type DashboardObject struct {
 	DashboardID   string
 	Name          string               `json:"name,omitempty"`
 	UserID        string               `json:"userid,omitempty"`
@@ -79,5 +79,5 @@ type DashboardWidget struct {
 type ChildDashboardField struct {
 	Type      string `json:"type,omitempty"`
 	NameField string `json:"name,omitempty"`
-	Value     string `json:"value"`
+	Value     string `json:"value,omitempty"`
 }

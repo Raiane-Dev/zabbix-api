@@ -1,28 +1,28 @@
 package entities
 
 type DiscoveredServiceGet struct {
-	DServiceIDs  []string `json:"dserviceid"`
-	DHostIDs     []string `json:"dhostid"`
-	DCheckIDs    []string `json:"dcheckids"`
-	DRuleIDs     []string `json:"druleids"`
-	SelectDRules string   `json:"selectDRules"`
-	SelectDHosts string   `json:"selectDHosts"`
-	SelectHosts  string   `json:"selectHosts"`
-	LimitSelects int      `json:"limitSelects"`
+	DServiceIDs  []string `json:"dserviceid,omitempty"`
+	DHostIDs     []string `json:"dhostid,omitempty"`
+	DCheckIDs    []string `json:"dcheckids,omitempty"`
+	DRuleIDs     []string `json:"druleids,omitempty"`
+	SelectDRules string   `json:"selectDRules,omitempty"`
+	SelectDHosts string   `json:"selectDHosts,omitempty"`
+	SelectHosts  string   `json:"selectHosts,omitempty"`
+	LimitSelects int      `json:"limitSelects,omitempty"`
 	ZabbixCommun
 }
 
-type DiscoveredServiceOutput struct {
-	DServiceIDs string
-	DHostID     string
-	Type        string
-	Key         string
-	Value       string
-	Port        string
-	Status      int
-	LastUp      string
-	LastDown    string
-	DCheckID    string
-	IP          string
-	DNS         string
+type DiscoveredServiceObject struct {
+	DServiceIDs string `json:"dserviceids,omitempty"`
+	DHostID     string `json:"dhostid,omitempty"`
+	Type        string `json:"type,omitempty"`
+	Key         string `json:"key,omitempty"`
+	Value       string `json:"value,omitempty"`
+	Port        string `json:"port,omitempty"`
+	Status      int    `json:"status,omitempty"`
+	LastUp      string `json:"lastup,omitempty"`
+	LastDown    string `json:"lastdown,omitempty"`
+	DCheckID    string `json:"dcheckid,omitempty"`
+	IP          string `json:"ip,omitempty"`
+	DNS         string `json:"dns,omitempty"`
 }

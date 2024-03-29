@@ -1,87 +1,87 @@
 package entities
 
 type ReportObject struct {
-	ReportID    string `json:"reportid"`
-	UserID      string `json:"userid"`
-	Name        string `json:"name"`
-	DashboardID string `json:"dashboardid"`
-	Period      int    `json:"period"`
-	Cycle       int    `json:"cycle"`
-	StartTime   int    `json:"starttime"`
-	WeekDays    int    `json:"weekdays"`
-	ActiveSince string `json:"active_since"`
-	ActiveTIll  string `json:"active_till"`
-	Subject     string `json:"subject"`
-	Message     string `json:"message"`
-	Status      int    `json:"status"`
-	Description string `json:"description"`
-	State       int    `json:"state"`
-	LastSent    string `json:"lastsent"`
-	Info        string `json:"info"`
+	ReportID    string `json:"reportid,omitempty"`
+	UserID      string `json:"userid,omitempty"`
+	Name        string `json:"name,omitempty"`
+	DashboardID string `json:"dashboardid,omitempty"`
+	Period      int    `json:"period,omitempty"`
+	Cycle       int    `json:"cycle,omitempty"`
+	StartTime   int    `json:"starttime,omitempty"`
+	WeekDays    int    `json:"weekdays,omitempty"`
+	ActiveSince string `json:"active_since,omitempty"`
+	ActiveTIll  string `json:"active_till,omitempty"`
+	Subject     string `json:"subject,omitempty"`
+	Message     string `json:"message,omitempty"`
+	Status      int    `json:"status,omitempty"`
+	Description string `json:"description,omitempty"`
+	State       int    `json:"state,omitempty"`
+	LastSent    string `json:"lastsent,omitempty"`
+	Info        string `json:"info,omitempty"`
 }
 
 type ReportUser struct {
-	UserID       string `json:"userid"`
-	AccessUserID string `json:"access_userid"`
-	Exclude      int    `json:"exclude"`
+	UserID       string `json:"userid,omitempty"`
+	AccessUserID string `json:"access_userid,omitempty"`
+	Exclude      int    `json:"exclude,omitempty"`
 }
 
 type ReportUserGroup struct {
-	UsrGrpID     string `json:"usrgrpid"`
-	AccessUserID string `json:"access_userid"`
+	UsrGrpID     string `json:"usrgrpid,omitempty"`
+	AccessUserID string `json:"access_userid,omitempty"`
 }
 
 type ReportCreate struct {
-	UserID      string            `json:"userid"`
-	Name        string            `json:"name"`
-	DashboardID string            `json:"dashboardid"`
-	Period      int               `json:"period"`
-	Cycle       int               `json:"cycle"`
-	StartTime   int               `json:"starttime"`
-	WeekDays    int               `json:"weekdays"`
-	ActiveSince string            `json:"active_since"`
-	ActiveTIll  string            `json:"active_till"`
-	Subject     string            `json:"subject"`
-	Message     string            `json:"message"`
-	Status      int               `json:"status"`
-	Description string            `json:"description"`
-	State       int               `json:"state"`
-	LastSent    string            `json:"lastsent"`
-	Info        string            `json:"info"`
-	Users       []ReportUser      `json:"users"`
-	UserGroups  []ReportUserGroup `json:"user_groups"`
+	UserID      string            `json:"userid,omitempty"`
+	Name        string            `json:"name,omitempty"`
+	DashboardID string            `json:"dashboardid,omitempty"`
+	Period      int               `json:"period,omitempty"`
+	Cycle       int               `json:"cycle,omitempty"`
+	StartTime   int               `json:"starttime,omitempty"`
+	WeekDays    int               `json:"weekdays,omitempty"`
+	ActiveSince string            `json:"active_since,omitempty"`
+	ActiveTIll  string            `json:"active_till,omitempty"`
+	Subject     string            `json:"subject,omitempty"`
+	Message     string            `json:"message,omitempty"`
+	Status      int               `json:"status,omitempty"`
+	Description string            `json:"description,omitempty"`
+	State       int               `json:"state,omitempty"`
+	LastSent    string            `json:"lastsent,omitempty"`
+	Info        string            `json:"info,omitempty"`
+	Users       []ReportUser      `json:"users,omitempty"`
+	UserGroups  []ReportUserGroup `json:"user_groups,omitempty"`
 }
 
 type ReportUpdate struct {
-	ReportID    string            `json:"reportid"`
-	UserID      string            `json:"userid"`
-	Name        string            `json:"name"`
-	DashboardID string            `json:"dashboardid"`
-	Period      int               `json:"period"`
-	Cycle       int               `json:"cycle"`
-	StartTime   int               `json:"starttime"`
-	WeekDays    int               `json:"weekdays"`
-	ActiveSince string            `json:"active_since"`
-	ActiveTIll  string            `json:"active_till"`
-	Subject     string            `json:"subject"`
-	Message     string            `json:"message"`
-	Status      int               `json:"status"`
-	Description string            `json:"description"`
-	State       int               `json:"state"`
-	LastSent    string            `json:"lastsent"`
-	Info        string            `json:"info"`
-	Users       []ReportUser      `json:"users"`
-	UserGroups  []ReportUserGroup `json:"user_groups"`
+	ReportID    string            `json:"reportid,omitempty"`
+	UserID      string            `json:"userid,omitempty"`
+	Name        string            `json:"name,omitempty"`
+	DashboardID string            `json:"dashboardid,omitempty"`
+	Period      int               `json:"period,omitempty"`
+	Cycle       int               `json:"cycle,omitempty"`
+	StartTime   int               `json:"starttime,omitempty"`
+	WeekDays    int               `json:"weekdays,omitempty"`
+	ActiveSince string            `json:"active_since,omitempty"`
+	ActiveTIll  string            `json:"active_till,omitempty"`
+	Subject     string            `json:"subject,omitempty"`
+	Message     string            `json:"message,omitempty"`
+	Status      int               `json:"status,omitempty"`
+	Description string            `json:"description,omitempty"`
+	State       int               `json:"state,omitempty"`
+	LastSent    string            `json:"lastsent,omitempty"`
+	Info        string            `json:"info,omitempty"`
+	Users       []ReportUser      `json:"users,omitempty"`
+	UserGroups  []ReportUserGroup `json:"user_groups,omitempty"`
 }
 
 type ReportResponse struct {
-	ReportsIDs []string `json:"reportsids"`
+	ReportsIDs []string `json:"reportsids,omitempty"`
 }
 
 type ReportGet struct {
-	ReportIDs        []string `json:"reportids"`
-	Expired          bool     `json:"expired"`
-	SelectUsers      string   `json:"selectUsers"`
-	SelectUserGroups string   `json:"selectUserGroups"`
+	ReportIDs        []string `json:"reportids,omitempty"`
+	Expired          bool     `json:"expired,omitempty"`
+	SelectUsers      string   `json:"selectUsers,omitempty"`
+	SelectUserGroups string   `json:"selectUserGroups,omitempty"`
 	ZabbixCommun
 }

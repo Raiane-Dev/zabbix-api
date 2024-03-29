@@ -1,57 +1,57 @@
 package entities
 
 type ProblemObject struct {
-	EventID       string                `json:"eventid"`
-	Source        int                   `json:"source"`
-	Object        int                   `json:"object"`
-	ObjectID      string                `json:"objectid"`
-	Clock         string                `json:"clock"`
-	NS            int                   `json:"ns"`
-	REventID      string                `json:"r_eventid"`
-	RClock        string                `json:"r_clock"`
-	RNS           int                   `json:"r_ns"`
-	CauseEventID  string                `json:"cause_eventid"`
-	CorrelationID string                `json:"correlationid"`
-	UserID        string                `json:"userid"`
-	Name          string                `json:"name"`
-	Acknowledge   int                   `json:"acknowledge"`
-	Severity      int                   `json:"severity"`
-	Supressed     int                   `json:"supressed"`
-	Opdata        string                `json:"opdata"`
-	Urls          []ProblemMediaTypeURL `json:"urls"`
+	EventID       string                `json:"eventid,omitempty"`
+	Source        int                   `json:"source,omitempty"`
+	Object        int                   `json:"object,omitempty"`
+	ObjectID      string                `json:"objectid,omitempty"`
+	Clock         string                `json:"clock,omitempty"`
+	NS            int                   `json:"ns,omitempty"`
+	REventID      string                `json:"r_eventid,omitempty"`
+	RClock        string                `json:"r_clock,omitempty"`
+	RNS           int                   `json:"r_ns,omitempty"`
+	CauseEventID  string                `json:"cause_eventid,omitempty"`
+	CorrelationID string                `json:"correlationid,omitempty"`
+	UserID        string                `json:"userid,omitempty"`
+	Name          string                `json:"name,omitempty"`
+	Acknowledge   int                   `json:"acknowledge,omitempty"`
+	Severity      int                   `json:"severity,omitempty"`
+	Supressed     int                   `json:"supressed,omitempty"`
+	Opdata        string                `json:"opdata,omitempty"`
+	Urls          []ProblemMediaTypeURL `json:"urls,omitempty"`
 }
 
 type ProblemMediaTypeURL struct {
-	Name string `json:"name"`
-	Url  string `json:"url"`
+	Name string `json:"name,omitempty"`
+	Url  string `json:"url,omitempty"`
 }
 
 type ProblemGet struct {
-	EventIDs             []string   `json:"eventids"`
-	GroupIDs             []string   `json:"groupids"`
-	HostIDs              []string   `json:"hostids"`
-	ObjectIDs            []string   `json:"objectids"`
-	Source               int        `json:"source"`
-	Object               int        `json:"object"`
-	Acknowledge          bool       `json:"acknowledge"`
-	Supressed            bool       `json:"supressed"`
-	Symptom              bool       `json:"symptom"`
-	Severities           []int      `json:"severities"`
-	Evaltype             int        `json:"evaltype"`
-	Tags                 ProblemTag `json:"tags"`
-	Recent               bool       `json:"recent"`
-	EventIDFrom          string     `json:"eventidfrom"`
-	EventIDTill          string     `json:"eventidtill"`
-	TimeFrom             string     `json:"timefrom"`
-	TimeFill             string     `json:"timefill"`
-	SelectAcknowledges   string     `json:"selectAcknowledges"`
-	SelectTags           string     `json:"selectTags"`
-	SelectSupressionData string     `json:"selectSupressionData"`
+	EventIDs             []string   `json:"eventids,omitempty"`
+	GroupIDs             []string   `json:"groupids,omitempty"`
+	HostIDs              []string   `json:"hostids,omitempty"`
+	ObjectIDs            []string   `json:"objectids,omitempty"`
+	Source               int        `json:"source,omitempty"`
+	Object               int        `json:"object,omitempty"`
+	Acknowledge          bool       `json:"acknowledge,omitempty"`
+	Supressed            bool       `json:"supressed,omitempty"`
+	Symptom              bool       `json:"symptom,omitempty"`
+	Severities           []int      `json:"severities,omitempty"`
+	Evaltype             int        `json:"evaltype,omitempty"`
+	Tags                 ProblemTag `json:"tags,omitempty"`
+	Recent               bool       `json:"recent,omitempty"`
+	EventIDFrom          string     `json:"eventidfrom,omitempty"`
+	EventIDTill          string     `json:"eventidtill,omitempty"`
+	TimeFrom             string     `json:"timefrom,omitempty"`
+	TimeFill             string     `json:"timefill,omitempty"`
+	SelectAcknowledges   string     `json:"selectAcknowledges,omitempty"`
+	SelectTags           string     `json:"selectTags,omitempty"`
+	SelectSupressionData string     `json:"selectSupressionData,omitempty"`
 	ZabbixCommun
 }
 
 type ProblemTag struct {
-	Tag      string `json:"tag"`
-	Value    string `json:"value"`
-	Operator string `json:"operator"`
+	Tag      string `json:"tag,omitempty"`
+	Value    string `json:"value,omitempty"`
+	Operator string `json:"operator,omitempty"`
 }

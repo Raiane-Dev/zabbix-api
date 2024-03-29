@@ -19,7 +19,7 @@ type AlertGet struct {
 	ZabbixCommun
 }
 
-type AlertOutput struct {
+type AlertObject struct {
 	AlertID       string `json:"alertid,omitempty"`
 	ActionID      string `json:"actionid,omitempty"`
 	EventID       string `json:"eventid,omitempty"`

@@ -4,7 +4,7 @@ type AutoregistrationGet struct {
 	Output string `json:"output,omitempty"`
 }
 
-type AutoregistrationOutput struct {
+type AutoregistrationObject struct {
 	TLSAccept int `json:"tls_accept,omitempty"`
 }
 

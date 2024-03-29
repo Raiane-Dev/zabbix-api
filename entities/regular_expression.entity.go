@@ -1,33 +1,33 @@
 package entities
 
 type RegularExpressionObject struct {
-	RegexpID   string `json:"regexpid"`
-	Name       string `json:"name"`
-	TestString string `json:"test_string"`
+	RegexpID   string `json:"regexpid,omitempty"`
+	Name       string `json:"name,omitempty"`
+	TestString string `json:"test_string,omitempty"`
 }
 
 type RegularExpressionCreate struct {
-	Name       string       `json:"name"`
-	TestString string       `json:"test_string"`
-	Expression []Expression `json:"expression"`
+	Name       string       `json:"name,omitempty"`
+	TestString string       `json:"test_string,omitempty"`
+	Expression []Expression `json:"expression,omitempty"`
 }
 
 type RegularExpressionUpdate struct {
-	RegexpID   string       `json:"regexpid"`
-	Name       string       `json:"name"`
-	TestString string       `json:"test_string"`
-	Expression []Expression `json:"expression"`
+	RegexpID   string       `json:"regexpid,omitempty"`
+	Name       string       `json:"name,omitempty"`
+	TestString string       `json:"test_string,omitempty"`
+	Expression []Expression `json:"expression,omitempty"`
 }
 
 type RegularExpressionGet struct {
-	RegexpIDs        string `json:"regexpids"`
-	SelectExpression string `json:"selectExpression"`
+	RegexpIDs        string `json:"regexpids,omitempty"`
+	SelectExpression string `json:"selectExpression,omitempty"`
 	ZabbixCommun
 }
 
 type Expression struct {
-	Expression     string `json:"expression"`
-	ExpressionType int    `json:"expression_type"`
-	ExpDelimiter   string `json:"exp_delimiter"`
-	CaseSensitive  int    `json:"case_sensitive"`
+	Expression     string `json:"expression,omitempty"`
+	ExpressionType int    `json:"expression_type,omitempty"`
+	ExpDelimiter   string `json:"exp_delimiter,omitempty"`
+	CaseSensitive  int    `json:"case_sensitive,omitempty"`
 }

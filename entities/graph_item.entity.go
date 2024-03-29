@@ -1,14 +1,14 @@
 package entities
 
 type GraphItemGet struct {
-	GraphIDs     []string `json:"graphids"`
-	ItemIDs      []string `json:"itemids"`
-	Type         int      `json:"type"`
-	SelectGraphs string   `json:"selectGraphs"`
+	GraphIDs     []string `json:"graphids,omitempty"`
+	ItemIDs      []string `json:"itemids,omitempty"`
+	Type         int      `json:"type,omitempty"`
+	SelectGraphs string   `json:"selectGraphs,omitempty"`
 	ZabbixCommun
 }
 
-type GraphItemOutput struct {
+type GraphItemObject struct {
 	GItemID   string `json:"gitemid,omitempty"`
 	Color     string `json:"color,omitempty"`
 	ItemID    string `json:"itemid,omitempty"`

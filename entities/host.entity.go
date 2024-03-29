@@ -47,122 +47,122 @@ type HostGet struct {
 	SelectValueMaps               string   `json:"selectValueMaps,omitempty"`
 	SelectInheritedTags           string   `json:"selectInheritedTags,omitempty"`
 	SearchInventory               string   `json:"searchInventory,omitempty"`
-	ZabbixCommon                  string   `json:"-"`
+	ZabbixCommon                  string
 }
 
 type HostObject struct {
 	HostID            string `json:"hostid,omitempty"`
-	Host              string `json:"host"`
-	Description       string `json:"description"`
-	Flags             int    `json:"flags"`
-	InventoryMode     int    `json:"inventory_mode"`
-	IPMIAuthType      int    `json:"ipmi_authtype"`
-	IPMIPassword      string `json:"ipmi_password"`
-	IPMIPrivilege     int    `json:"ipmi_privilege"`
-	IPMIUsername      string `json:"ipmi_username"`
-	MaintenanceFrom   string `json:"maintenance_from"`
-	MaintenanceStatus int    `json:"maintenance_status"`
-	MaintenanceType   int    `json:"maintenance_type"`
-	MaintenanceID     string `json:"maintenanceid"`
-	Name              string `json:"name"`
-	ProxyHostID       string `json:"proxy_hostid"`
-	Status            int    `json:"status"`
-	TLSConnect        int    `json:"tls_connect"`
-	TLSAccept         int    `json:"tls_accept"`
-	TLSIssuer         string `json:"tls_issuer"`
-	TLSSubject        string `json:"tls_subject"`
-	TLSPskIdentify    string `json:"tls_pskidentify"`
-	TLSPsk            string `json:"tls_psk"`
-	ActiveAvailable   int    `json:"active_available"`
+	Host              string `json:"host,omitempty"`
+	Description       string `json:"description,omitempty"`
+	Flags             int    `json:"flags,omitempty"`
+	InventoryMode     int    `json:"inventory_mode,omitempty"`
+	IPMIAuthType      int    `json:"ipmi_authtype,omitempty"`
+	IPMIPassword      string `json:"ipmi_password,omitempty"`
+	IPMIPrivilege     int    `json:"ipmi_privilege,omitempty"`
+	IPMIUsername      string `json:"ipmi_username,omitempty"`
+	MaintenanceFrom   string `json:"maintenance_from,omitempty"`
+	MaintenanceStatus int    `json:"maintenance_status,omitempty"`
+	MaintenanceType   int    `json:"maintenance_type,omitempty"`
+	MaintenanceID     string `json:"maintenanceid,omitempty"`
+	Name              string `json:"name,omitempty"`
+	ProxyHostID       string `json:"proxy_hostid,omitempty"`
+	Status            int    `json:"status,omitempty"`
+	TLSConnect        int    `json:"tls_connect,omitempty"`
+	TLSAccept         int    `json:"tls_accept,omitempty"`
+	TLSIssuer         string `json:"tls_issuer,omitempty"`
+	TLSSubject        string `json:"tls_subject,omitempty"`
+	TLSPskIdentify    string `json:"tls_pskidentify,omitempty"`
+	TLSPsk            string `json:"tls_psk,omitempty"`
+	ActiveAvailable   int    `json:"active_available,omitempty"`
 }
 
 type HostCreate struct {
-	Host              string                `json:"host"`
-	Description       string                `json:"description"`
-	Flags             int                   `json:"flags"`
-	InventoryMode     int                   `json:"inventory_mode"`
-	IPMIAuthType      int                   `json:"ipmi_authtype"`
-	IPMIPassword      string                `json:"ipmi_password"`
-	IPMIPrivilege     int                   `json:"ipmi_privilege"`
-	IPMIUsername      string                `json:"ipmi_username"`
-	MaintenanceFrom   string                `json:"maintenance_from"`
-	MaintenanceStatus int                   `json:"maintenance_status"`
-	MaintenanceType   int                   `json:"maintenance_type"`
-	MaintenanceID     string                `json:"maintenanceid"`
-	Name              string                `json:"name"`
-	ProxyHostID       string                `json:"proxy_hostid"`
-	Status            int                   `json:"status"`
-	TLSConnect        int                   `json:"tls_connect"`
-	TLSAccept         int                   `json:"tls_accept"`
-	TLSIssuer         string                `json:"tls_issuer"`
-	TLSSubject        string                `json:"tls_subject"`
-	TLSPskIdentify    string                `json:"tls_pskidentify"`
-	TLSPsk            string                `json:"tls_psk"`
-	ActiveAvailable   int                   `json:"active_available"`
-	Groups            []HostGroupObject     `json:"groups"`
-	Interfaces        []HostInterfaceObject `json:"interfaces"`
-	HostTags          []HostTagObject       `json:"hosttags"`
-	Templates         []TemplateObject      `json:"templates"`
-	Macros            []UserMacroObject     `json:"macros"`
-	Inventory         []HostInventoryObject `json:"inventory"`
+	Host              string                `json:"host,omitempty"`
+	Description       string                `json:"description,omitempty"`
+	Flags             int                   `json:"flags,omitempty"`
+	InventoryMode     int                   `json:"inventory_mode,omitempty"`
+	IPMIAuthType      int                   `json:"ipmi_authtype,omitempty"`
+	IPMIPassword      string                `json:"ipmi_password,omitempty"`
+	IPMIPrivilege     int                   `json:"ipmi_privilege,omitempty"`
+	IPMIUsername      string                `json:"ipmi_username,omitempty"`
+	MaintenanceFrom   string                `json:"maintenance_from,omitempty"`
+	MaintenanceStatus int                   `json:"maintenance_status,omitempty"`
+	MaintenanceType   int                   `json:"maintenance_type,omitempty"`
+	MaintenanceID     string                `json:"maintenanceid,omitempty"`
+	Name              string                `json:"name,omitempty"`
+	ProxyHostID       string                `json:"proxy_hostid,omitempty"`
+	Status            int                   `json:"status,omitempty"`
+	TLSConnect        int                   `json:"tls_connect,omitempty"`
+	TLSAccept         int                   `json:"tls_accept,omitempty"`
+	TLSIssuer         string                `json:"tls_issuer,omitempty"`
+	TLSSubject        string                `json:"tls_subject,omitempty"`
+	TLSPskIdentify    string                `json:"tls_pskidentify,omitempty"`
+	TLSPsk            string                `json:"tls_psk,omitempty"`
+	ActiveAvailable   int                   `json:"active_available,omitempty"`
+	Groups            []HostGroupObject     `json:"groups,omitempty"`
+	Interfaces        []HostInterfaceObject `json:"interfaces,omitempty"`
+	HostTags          []HostTagObject       `json:"hosttags,omitempty"`
+	Templates         []TemplateObject      `json:"templates,omitempty"`
+	Macros            []UserMacroObject     `json:"macros,omitempty"`
+	Inventory         []HostInventoryObject `json:"inventory,omitempty"`
 }
 type HostUpdate struct {
 	HostID            string                `json:"hostid,omitempty"`
-	Host              string                `json:"host"`
-	Description       string                `json:"description"`
-	Flags             int                   `json:"flags"`
-	InventoryMode     int                   `json:"inventory_mode"`
-	IPMIAuthType      int                   `json:"ipmi_authtype"`
-	IPMIPassword      string                `json:"ipmi_password"`
-	IPMIPrivilege     int                   `json:"ipmi_privilege"`
-	IPMIUsername      string                `json:"ipmi_username"`
-	MaintenanceFrom   string                `json:"maintenance_from"`
-	MaintenanceStatus int                   `json:"maintenance_status"`
-	MaintenanceType   int                   `json:"maintenance_type"`
-	MaintenanceID     string                `json:"maintenanceid"`
-	Name              string                `json:"name"`
-	ProxyHostID       string                `json:"proxy_hostid"`
-	Status            int                   `json:"status"`
-	TLSConnect        int                   `json:"tls_connect"`
-	TLSAccept         int                   `json:"tls_accept"`
-	TLSIssuer         string                `json:"tls_issuer"`
-	TLSSubject        string                `json:"tls_subject"`
-	TLSPskIdentify    string                `json:"tls_pskidentify"`
-	TLSPsk            string                `json:"tls_psk"`
-	ActiveAvailable   int                   `json:"active_available"`
-	Groups            []HostGroupObject     `json:"groups"`
-	Interfaces        []HostInterfaceObject `json:"interfaces"`
-	HostTags          []HostTagObject       `json:"hosttags"`
-	Templates         []TemplateObject      `json:"templates"`
-	Macros            []UserMacroObject     `json:"macros"`
-	Inventory         []HostInventoryObject `json:"inventory"`
+	Host              string                `json:"host,omitempty"`
+	Description       string                `json:"description,omitempty"`
+	Flags             int                   `json:"flags,omitempty"`
+	InventoryMode     int                   `json:"inventory_mode,omitempty"`
+	IPMIAuthType      int                   `json:"ipmi_authtype,omitempty"`
+	IPMIPassword      string                `json:"ipmi_password,omitempty"`
+	IPMIPrivilege     int                   `json:"ipmi_privilege,omitempty"`
+	IPMIUsername      string                `json:"ipmi_username,omitempty"`
+	MaintenanceFrom   string                `json:"maintenance_from,omitempty"`
+	MaintenanceStatus int                   `json:"maintenance_status,omitempty"`
+	MaintenanceType   int                   `json:"maintenance_type,omitempty"`
+	MaintenanceID     string                `json:"maintenanceid,omitempty"`
+	Name              string                `json:"name,omitempty"`
+	ProxyHostID       string                `json:"proxy_hostid,omitempty"`
+	Status            int                   `json:"status,omitempty"`
+	TLSConnect        int                   `json:"tls_connect,omitempty"`
+	TLSAccept         int                   `json:"tls_accept,omitempty"`
+	TLSIssuer         string                `json:"tls_issuer,omitempty"`
+	TLSSubject        string                `json:"tls_subject,omitempty"`
+	TLSPskIdentify    string                `json:"tls_pskidentify,omitempty"`
+	TLSPsk            string                `json:"tls_psk,omitempty"`
+	ActiveAvailable   int                   `json:"active_available,omitempty"`
+	Groups            []HostGroupObject     `json:"groups,omitempty"`
+	Interfaces        []HostInterfaceObject `json:"interfaces,omitempty"`
+	HostTags          []HostTagObject       `json:"hosttags,omitempty"`
+	Templates         []TemplateObject      `json:"templates,omitempty"`
+	Macros            []UserMacroObject     `json:"macros,omitempty"`
+	Inventory         []HostInventoryObject `json:"inventory,omitempty"`
 }
 
 type HostMassAdd struct {
-	Hosts      []map[string]string   `json:"hosts"`
-	Groups     []HostGroupObject     `json:"groups"`
-	Interfaces []HostInterfaceObject `json:"interfaces"`
-	HostTags   []HostTagObject       `json:"hosttags"`
-	Templates  []TemplateObject      `json:"templates"`
-	Macros     []UserMacroObject     `json:"macros"`
+	Hosts      []map[string]string   `json:"hosts,omitempty"`
+	Groups     []HostGroupObject     `json:"groups,omitempty"`
+	Interfaces []HostInterfaceObject `json:"interfaces,omitempty"`
+	HostTags   []HostTagObject       `json:"hosttags,omitempty"`
+	Templates  []TemplateObject      `json:"templates,omitempty"`
+	Macros     []UserMacroObject     `json:"macros,omitempty"`
 }
 
 type HostMassRemove struct {
-	HostIDs          []string              `json:"hostids"`
-	GroupsIDs        []string              `json:"groupsids"`
-	Interfaces       []HostInterfaceObject `json:"interfaces"`
-	Macros           []UserMacroObject     `json:"macros"`
-	TemplateIDs      []string              `json:"templateids"`
-	TemplateIDsClear []string              `json:"templateids_clear"`
+	HostIDs          []string              `json:"hostids,omitempty"`
+	GroupsIDs        []string              `json:"groupsids,omitempty"`
+	Interfaces       []HostInterfaceObject `json:"interfaces,omitempty"`
+	Macros           []UserMacroObject     `json:"macros,omitempty"`
+	TemplateIDs      []string              `json:"templateids,omitempty"`
+	TemplateIDsClear []string              `json:"templateids_clear,omitempty"`
 }
 
 type HostMassUpdate struct {
-	Hosts      []map[string]string   `json:"hosts"`
-	Groups     []HostGroupObject     `json:"groups"`
-	Inventory  []HostInventoryObject `json:"inventory"`
-	Interfaces []HostInterfaceObject `json:"interfaces"`
-	Templates  []TemplateObject      `json:"templates"`
-	Macros     []UserMacroObject     `json:"macros"`
+	Hosts      []map[string]string   `json:"hosts,omitempty"`
+	Groups     []HostGroupObject     `json:"groups,omitempty"`
+	Inventory  []HostInventoryObject `json:"inventory,omitempty"`
+	Interfaces []HostInterfaceObject `json:"interfaces,omitempty"`
+	Templates  []TemplateObject      `json:"templates,omitempty"`
+	Macros     []UserMacroObject     `json:"macros,omitempty"`
 }
 
 type HostInventoryObject struct {
@@ -170,7 +170,7 @@ type HostInventoryObject struct {
 }
 
 type HostTagObject struct {
-	Tag       string `json:"tag"`
-	Value     string `json:"value"`
-	Automatic int    `json:"automatic"`
+	Tag       string `json:"tag,omitempty"`
+	Value     string `json:"value,omitempty"`
+	Automatic int    `json:"automatic,omitempty"`
 }

@@ -8,7 +8,7 @@ type AuditlogGet struct {
 	ZabbixCommun
 }
 
-type AuditlogOutput struct {
+type AuditlogObject struct {
 	AuditID      string `json:"auditid,omitempty"`
 	UserID       string `json:"userid,omitempty"`
 	Username     string `json:"username,omitempty"`
