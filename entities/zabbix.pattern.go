@@ -25,8 +25,9 @@ type ZabbixCommun struct {
 	StartSearch            bool                `json:"startSearch,omitempty"`
 }
 
-type LoginOutput struct {
-	Result string `json:"result,omitempty"`
+type ZabbixTag struct {
+	Tag   string `json:"tag,omitempty"`
+	Value string `json:"value,omitempty"`
 }
 
 type IntegrationRPC struct {
@@ -40,11 +41,9 @@ type Request struct {
 	Query map[string]string
 }
 
-type Body[T any] struct {
-	Return struct {
-		Result []T   `json:"result,omitempty"`
-		Error  Error `json:"error,omitempty"`
-	} `json:"-"`
+type Response[T any] struct {
+	Result T     `json:"result,omitempty"`
+	Error  Error `json:"error,omitempty"`
 }
 
 type Error struct {

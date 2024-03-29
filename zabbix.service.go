@@ -1,24 +1,21 @@
-package handlers
+package zabbix_api
 
 import (
-	"github.com/Raiane-Dev/zabbix-api.git/configs"
 	"github.com/Raiane-Dev/zabbix-api.git/entities"
 	"github.com/Raiane-Dev/zabbix-api.git/utils"
 )
 
-type V6 struct{}
-
-func (V6) bus(body any) (response any) {
+func bus(body any) (response any) {
 
 	request := &entities.IntegrationRPC{
-		Host:          configs.ZABBIX_HOST,
-		Authorization: configs.ZABBIX_TOKEN,
+		Host:          "",
+		Authorization: "",
 		Params:        body,
 	}
 
 	rest, err := utils.RemoteProcedure(request, &response)
-	if err != nil {
-		panic(err)
+	if rest.IsError() || err != nil {
+		return nil
 	}
 
 	response = rest.Body()
